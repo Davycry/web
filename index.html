@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keylogger</title>
+    <script>
+        function startKeylogger() {
+            fetch('davykey.netlify.app')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        alert('Keylogger started successfully!');
+                    }
+                });
+        }
+    </script>
+</head>
+<body onload="startKeylogger()">
+    <h1>Loading...</h1>
+</body>
+</html>
